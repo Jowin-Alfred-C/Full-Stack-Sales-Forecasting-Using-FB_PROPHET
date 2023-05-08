@@ -1,0 +1,29 @@
+<body>
+  <div class="container">
+    <div class="column-left">
+  <form >
+    <h1>Sign Up </h1>
+  <div class="form-group">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" [(ngModel)]="username" required>
+  </div>
+  <div class="form-group">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" [(ngModel)]="email" required>
+  </div>
+  <div class="form-group"> 
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  </div>
+  <div class="form-group">
+  <label for="confirm_password">Confirm Password:</label>
+  <input type="password" id="confirm_password" name="confirm_password" [(ngModel)]="confirmpassword" required>
+  </div>
+  <button (click)="register()">Register</button>
+  <a href="/login">Already have an account?</a>
+</form>
+</div>
+</div>
+
+  
+</body>

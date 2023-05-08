@@ -1,0 +1,153 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;    
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .left-col {
+    flex: 1;
+    margin-right:50px;
+  }
+  
+  .right-col {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .card {
+      flex-direction: column;
+    }
+  
+    .right-col {
+      padding-left:0;
+    }
+  }
+  
+  button[type=submit] {
+    background-color: #45dd96;
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #03332f;
+  }
+  
+  label {
+    color: #125202;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    border: none;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.5);
+    color: #45dd96;
+    font-size: 16px;
+    padding: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  input:focus {
+    outline: none;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.411);
+  }
+  
+  .dropzone {
+    border: 3px dashed #45dd96;
+    border-radius: 8px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+  }
+  
+  .dropzone-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .upload-button {
+    background-color: #45dd96;
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .upload-button:hover {
+    background-color: #03332f;
+  }
+  
+  .uploaded-files {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px #c5ced6, 
+                -5px -5px 20px #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .file-name {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .file-type {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+  }
+
+  .uploaded-files button{
+    color: white;
+    background-color: rgb(255, 119, 119);
+  }
+
+  .uploaded-files button:hover{
+    background-color: rgb(253, 37, 37);
+  }

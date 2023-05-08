@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="left-col">
+    <div class="form-group">
+      <ngx-dropzone class="dropzone" [multiple]="false" (change)="onFileSelected($event)" accept=".csv">
+        <div class="dropzone-label">
+          <div>Drop file here <br>
+            or <br> click to upload file</div>
+          <button type="button" class="upload-button">Upload</button>
+        </div>
+      </ngx-dropzone>
+      <div class="uploaded-files" *ngIf="selectedfile.name">
+        <span class="file-name">{{selectedfile.name}}</span>
+        <span class="file-type">{{selectedfile.type}}</span>
+        <button mat-raised-button class="del-button" (click)="remove_file()">Delete</button>
+      </div>
+      
+    </div>
+    </div> 
+  <div class="right-col">
+    <form (ngSubmit)="onSubmit()" #fileForm="ngForm">
+      <div class="form-group">
+        <label for="x">Enter feature column:</label>
+        <input type="text" name="x" [(ngModel)]="x" >
+      </div>  
+      <div class="form-group">
+        <label for="y">Enter target column:</label>
+        <input type="text" name="y" [(ngModel)]="y" >
+      </div>
+      <div class="form-group">
+        <label for="start_date">Start date:</label>
+        <input type="text" name="start_date" [(ngModel)]="start_date" >
+      </div>
+      <div class="form-group">
+        <label for="end_date">End date:</label>
+        <input type="text" name="end_date" [(ngModel)]="end_date" > 
+      </div>  
+      <div class="form-group">
+        <label for="frequency">Frequency:</label>
+        <input type="text" name="frequency" [(ngModel)]="frequency" >  
+      </div>
+      <div class="form-group">
+        <label for="forecast_period">Forecast period:</label>
+        <input type="text" name="forecast_period" [(ngModel)]="forecast_period" >
+      </div>
+      <button type="submit" [disabled]="!fileForm.valid">Submit</button>
+    </form>
+  </div>
+
+</div>

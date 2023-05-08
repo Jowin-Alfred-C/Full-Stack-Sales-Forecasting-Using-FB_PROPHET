@@ -1,0 +1,29 @@
+<div class="card">
+  <h2 class="title">Predicted sales for your selected range of Date</h2>
+<div class="table-container">
+  <table class="table">
+    <tr>
+      <th>Date</th>
+      <th>Sales</th>
+    </tr>
+    <tr *ngFor="let item of data.result">
+      <td>{{ item.ds }}</td>
+      <td>{{ item.yhat }}</td>
+    </tr>
+  </table>
+</div>
+  
+<div *ngIf="image1" >
+  <h2 class="title">Forecasted Plot for selected period</h2>
+  <img [src]="image1" alt="Forecast Plot" class="image">
+</div>
+
+  <div *ngIf="image2">
+    <h2 class="title">Trends in the data</h2>
+    <img [src]="image2" alt="Forecast Plot" class="image">
+  </div>
+
+  <button (click)="onclicked()">More Info</button>
+
+</div>
+

@@ -1,0 +1,17 @@
+<div class="card">
+
+<h1 class="title">Model Performance</h1>
+  <div class="table-container">
+  <table class="table">
+    <tr>
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+    <tr *ngFor="let key of keys(metric)">
+      <td>{{ key }}</td>
+      <td>{{ metric[key] }}</td>
+    </tr>
+  </table>
+</div>
+
+</div>
